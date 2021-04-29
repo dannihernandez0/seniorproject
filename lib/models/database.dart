@@ -92,11 +92,12 @@ class DatabaseData {
     var songList = await songListMap();
     int count = songList.length;
 
-    List<SongData> trackList = [];
+    List<SongData> listOfSongs = [];
     //List<SongData>();
 
     for (int i = 0; i < count; i++) {
-      trackList.add(SongData.fromMapObject(songList[i]));
+      listOfSongs.add(SongData.fromMapObject(songList[i]));
     }
+    return listOfSongs;
   }
 }

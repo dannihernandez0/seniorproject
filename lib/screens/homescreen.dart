@@ -1,51 +1,194 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:seniorproject/screens/details.dart';
 
-class Homescreen extends StatelessWidget {
-  const Homescreen({Key key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.pink,
-            leading: IconButton(
-              icon: Icon(
-                Icons.arrow_back_ios,
-                color: Colors.white,
+    return Scaffold(
+      /****************************APPBAR********************* */
+      appBar: AppBar(
+        backgroundColor: Color(0xff4C748B),
+        title: RichText(
+          textAlign: TextAlign.center,
+          text: TextSpan(
+              text: "Fluttify",
+              
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900,),
+              
+              children: <TextSpan>[
+                TextSpan(
+                  text: '\nFind your new sound',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+              ]),
+        ),
+        centerTitle: true,
+        toolbarHeight: 100,
+        elevation: 15,
+      ),
+/******************************************************* */
+      /********body************** */
+      body: Container(
+        color: Colors.white60,
+        padding: EdgeInsets.all(10.0),
+        margin: EdgeInsets.all(10.0),
+        child: GridView.count(
+          crossAxisCount: 2,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          children: [
+            //card1
+            Card(
+              elevation: 10,
+              //shadowColor: Colors.pink,
+              child: new InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Details()),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("lib/images/mountainscut.jpg"),
+                      fit: BoxFit.fill,
+                      alignment: Alignment.topCenter,
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "New \nMusic",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      foreground: Paint()
+                      ..style = PaintingStyle.fill
+                      ..strokeWidth = 3
+                      ..color = Colors.white
+                      ,
+                      ),
+                  )),
+                ),
               ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
             ),
-            title: Text('Question 1: Rows'),
-          ),
-          body: Center(
-              child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.favorite),
-                color: Colors.red,
-                onPressed: null,
+            //card2
+            Card(
+              elevation: 10,
+              //shadowColor: Colors.pink,
+              child: new InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Details()),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("lib/images/sunsetcut.jpg"),
+                      fit: BoxFit.fill,
+                      alignment: Alignment.topCenter,
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Add \nSongs",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      foreground: Paint()
+                      ..style = PaintingStyle.fill
+                      ..strokeWidth = 3
+                      ..color = Colors.white
+                      ,
+                      ),
+                  )),
+                ),
               ),
-              IconButton(
-                icon: Icon(Icons.comment),
-                onPressed: null,
+            ),
+            //card3
+            Card(
+              elevation: 10,
+              //shadowColor: Colors.pink,
+              child: new InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Details()),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("lib/images/treescut.jpg"),
+                      fit: BoxFit.fill,
+                      alignment: Alignment.topCenter,
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Liked \nSongs",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      foreground: Paint()
+                      ..style = PaintingStyle.fill
+                      ..strokeWidth = 3
+                      ..color = Colors.white
+                      ,
+                      ),
+                  )),
+                ),
               ),
-              IconButton(
-                icon: Icon(Icons.send_outlined),
-                onPressed: null,
+            ),
+            //card4
+            Card(
+              elevation: 10,
+              //shadowColor: Colors.pink,
+              child: new InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Details()),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("lib/images/civCut.png"),
+                      fit: BoxFit.fill,
+                      alignment: Alignment.topCenter,
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "About The \nApp",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      foreground: Paint()
+                      ..style = PaintingStyle.fill
+                      ..strokeWidth = 3
+                      ..color = Colors.white
+                      ,
+                      ),
+                  )),
+                ),
               ),
-              Spacer(),
-
-              IconButton(
-                icon: Icon(Icons.bookmark_border_outlined),
-                onPressed: null,
-              ),
-              // ADD YOUR WIDGETS HERE
-            ],
-          ))),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -52,6 +52,12 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - lib/images/civCut.png
+    - lib/images/mountainscut.jpg
+    - lib/images/sunsetcut.jpg
+    - lib/images/treescut.jpg
+    - lib/images/watercut.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
