@@ -2,7 +2,6 @@ import 'package:seniorproject/models/song_info.dart';
 import 'package:seniorproject/models/database.dart';
 import 'package:spotify/spotify.dart';
 import 'package:flutter/material.dart';
-
 import 'database.dart';
 import 'song_info.dart';
 

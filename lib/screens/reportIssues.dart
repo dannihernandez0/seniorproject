@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Recommended extends StatefulWidget {
-  const Recommended({Key key}) : super(key: key);
+class Report extends StatefulWidget {
+  const Report({Key key}) : super(key: key);
 
   @override
-  _RecommendedState createState() => _RecommendedState();
+  _ReportState createState() => _ReportState();
 }
 
-class _RecommendedState extends State<Recommended> {
+class _ReportState extends State<Report> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,14 +17,14 @@ class _RecommendedState extends State<Recommended> {
         title: RichText(
           textAlign: TextAlign.center,
           text: TextSpan(
-              text: "New songs",
+              text: "Experience Any Problems?",
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.w900,
               ),
               children: <TextSpan>[
                 TextSpan(
-                  text: '\nHandpicked just for you',
+                  text: '\n',
                   style: TextStyle(
                     fontSize: 15,
                   ),

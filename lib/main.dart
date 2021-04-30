@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+//import 'package:spotify/spotify.dart';
 import 'screens/openingScreen.dart';
+
+
+
+
 
 void main() {
   runApp(MyApp());
@@ -16,6 +21,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: OpeningScreen(),
+      
     );
   }
 }

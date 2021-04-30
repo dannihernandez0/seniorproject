@@ -1,51 +1,41 @@
 import 'package:flutter/material.dart';
 
-class LikedSongs extends StatelessWidget {
+class LikedSongs extends StatefulWidget {
   const LikedSongs({Key key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.pink,
-            leading: IconButton(
-              icon: Icon(
-                Icons.arrow_back_ios,
-                color: Colors.white,
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-            title: Text('Question 1: Rows'),
-          ),
-          body: Center(
-              child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.favorite),
-                color: Colors.red,
-                onPressed: null,
-              ),
-              IconButton(
-                icon: Icon(Icons.comment),
-                onPressed: null,
-              ),
-              IconButton(
-                icon: Icon(Icons.send_outlined),
-                onPressed: null,
-              ),
-              Spacer(),
+  _LikedSongsState createState() => _LikedSongsState();
+}
 
-              IconButton(
-                icon: Icon(Icons.bookmark_border_outlined),
-                onPressed: null,
+class _LikedSongsState extends State<LikedSongs> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //
+      appBar: AppBar(
+        backgroundColor: Color(0xff4C748B),
+        title: RichText(
+          textAlign: TextAlign.center,
+          text: TextSpan(
+              text: "Liked Songs",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.w900,
               ),
-              // ADD YOUR WIDGETS HERE
-            ],
-          ))),
+              children: <TextSpan>[
+                TextSpan(
+                  text: '\nSongs you added',
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
+                ),
+              ]),
+        ),
+        centerTitle: true,
+        toolbarHeight: 100,
+        elevation: 15,
+      ), //
+
     );
   }
 }

@@ -1,10 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:seniorproject/screens/details.dart';
+import 'package:seniorproject/screens/aboutUs.dart';
+import 'package:seniorproject/screens/liked_songs.dart';
+import 'package:seniorproject/screens/recommendations.dart';
+import 'package:seniorproject/screens/search_songs.dart';
+import 'package:seniorproject/screens/reportIssues.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key key}) : super(key: key);
 
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,9 +24,10 @@ class HomeScreen extends StatelessWidget {
           textAlign: TextAlign.center,
           text: TextSpan(
               text: "Fluttify",
-              
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900,),
-              
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.w900,
+              ),
               children: <TextSpan>[
                 TextSpan(
                   text: '\nFind your new sound',
@@ -50,7 +60,8 @@ class HomeScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Details()),
+                    //sends from button to recommended page
+                    MaterialPageRoute(builder: (context) => Recommended()),
                   );
                 },
                 child: Container(
@@ -69,11 +80,10 @@ class HomeScreen extends StatelessWidget {
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       foreground: Paint()
-                      ..style = PaintingStyle.fill
-                      ..strokeWidth = 3
-                      ..color = Colors.white
-                      ,
-                      ),
+                        ..style = PaintingStyle.fill
+                        ..strokeWidth = 3
+                        ..color = Colors.white,
+                    ),
                   )),
                 ),
               ),
@@ -86,7 +96,7 @@ class HomeScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Details()),
+                    MaterialPageRoute(builder: (context) => SearchSongs()),
                   );
                 },
                 child: Container(
@@ -105,11 +115,10 @@ class HomeScreen extends StatelessWidget {
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       foreground: Paint()
-                      ..style = PaintingStyle.fill
-                      ..strokeWidth = 3
-                      ..color = Colors.white
-                      ,
-                      ),
+                        ..style = PaintingStyle.fill
+                        ..strokeWidth = 3
+                        ..color = Colors.white,
+                    ),
                   )),
                 ),
               ),
@@ -122,7 +131,7 @@ class HomeScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Details()),
+                    MaterialPageRoute(builder: (context) => LikedSongs()),
                   );
                 },
                 child: Container(
@@ -141,11 +150,10 @@ class HomeScreen extends StatelessWidget {
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       foreground: Paint()
-                      ..style = PaintingStyle.fill
-                      ..strokeWidth = 3
-                      ..color = Colors.white
-                      ,
-                      ),
+                        ..style = PaintingStyle.fill
+                        ..strokeWidth = 3
+                        ..color = Colors.white,
+                    ),
                   )),
                 ),
               ),
@@ -158,7 +166,7 @@ class HomeScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Details()),
+                    MaterialPageRoute(builder: (context) => AboutUs()),
                   );
                 },
                 child: Container(
@@ -171,17 +179,51 @@ class HomeScreen extends StatelessWidget {
                   ),
                   child: Center(
                       child: Text(
-                    "About The \nApp",
+                    "About Our \nTeam",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       foreground: Paint()
-                      ..style = PaintingStyle.fill
-                      ..strokeWidth = 3
-                      ..color = Colors.white
-                      ,
-                      ),
+                        ..style = PaintingStyle.fill
+                        ..strokeWidth = 3
+                        ..color = Colors.white,
+                    ),
+                  )),
+                ),
+              ),
+            ),
+            //card5
+            Card(
+              elevation: 10,
+              //shadowColor: Colors.pink,
+              child: new InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Report()),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("lib/images/watercut.png"),
+                      fit: BoxFit.fill,
+                      alignment: Alignment.topCenter,
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Feedback",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      foreground: Paint()
+                        ..style = PaintingStyle.fill
+                        ..strokeWidth = 3
+                        ..color = Colors.white,
+                    ),
                   )),
                 ),
               ),

@@ -21,21 +21,23 @@ class _OpeningScreenState extends State<OpeningScreen> {
 
 //sends to design screen once ready.
   navigateToDeviceScreen() {
-    Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (context) => HomeScreen()));
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => HomeScreen()));
   }
 
 //change the background to a picture
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xff4C748B)
-
-      , body: HomeText());
+    return Scaffold(backgroundColor: Color(0xff4C748B), body: HomeText());
   }
 }
 
-class HomeText extends StatelessWidget {
+class HomeText extends StatefulWidget {
+  @override
+  _HomeTextState createState() => _HomeTextState();
+}
+
+class _HomeTextState extends State<HomeText> {
   @override
   Widget build(BuildContext context) {
     return Center(
