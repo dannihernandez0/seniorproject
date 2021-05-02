@@ -69,6 +69,19 @@ flutter:
     - lib/images/erykahhello.png
     - lib/images/conwaytwittyhello.jpg
     - lib/images/lionelrichie.jpg
+    # --goodbye albums
+    - lib/images/goodbyeBillie.jpg
+    - lib/images/goodbyeKD.jpg
+    - lib/images/goodbyeTrain.png
+    - lib/images/goodbyeFancy.jpg
+    - lib/images/goodbyeQL.jpg
+    - lib/images/goodbyePF.jpg
+    - lib/images/goodbyeRuss.jpg
+    - lib/images/goodbyeSWR.jpg
+    - lib/images/goodbyePM.png
+    - lib/images/goodbyeDixChix.jpg
+    - lib/images/meProfilepic.jpg
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -95,3 +108,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+

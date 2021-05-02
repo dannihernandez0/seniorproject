@@ -11,70 +11,10 @@ class SearchSongs extends StatefulWidget {
 }
 
 class _SearchSongsState extends State<SearchSongs> {
-  /* List<SongCardInfo> cardInfo = [
-    SongCardInfo(
-        title: "Hello", artist: "Adele", album: "25", albumArt: 'adele25.jpg'),
-    SongCardInfo(
-        title: "Hello",
-        artist: "Pop Smoke, A Boogie Wit da Hoodie",
-        album: "Shoot For The Stars Aim For The Moon (Deluxe)",
-        albumArt: 'aboog.jpg'),
-    SongCardInfo(
-        title: "Hello",
-        artist: "Allie X",
-        album: "Collxtion I",
-        albumArt: 'alliex.jpg'),
-  ];
-*/
-//variable to hold the text from the textbox
   String searchInput = "";
   //controller to use the textbox
   final TextEditingController queryControl = TextEditingController();
-/*
-  Widget songCardwidg(SongCardInfo) {
-    return Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: Card(
-        color: Colors.grey[800],
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                    width: 50.0,
-                    height: 50.0,
-                    decoration: new BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: new DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage(SongCardInfo.albumArt)))),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    SongCardInfo.title,
-                    style: TextStyle(color: Colors.black87, fontSize: 18),
-                  ),
-                  Text(
-                    SongCardInfo.artist,
-                    style: TextStyle(color: Colors.black87, fontSize: 12),
-                  ),
-                   Text(
-                    SongCardInfo.album,
-                    style: TextStyle(color: Colors.black87, fontSize: 18),
-                  ),
-                ],
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-*/
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -127,13 +67,13 @@ class _SearchSongsState extends State<SearchSongs> {
                   searchInput = queryControl.text;
                 });
                 //Success!
-                if(searchInput == 'hello'){
+                if (searchInput == 'hello') {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => HelloScreen()),
                   );
                 }
-                if(searchInput == 'goodbye'){
+                if (searchInput == 'goodbye' ||searchInput == 'Goodbye') {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => GoodbyeScreen()),

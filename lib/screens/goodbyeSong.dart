@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seniorproject/models/song_Card.dart';
 
 //import 'package:sqflite/sqflite.dart';
 
@@ -10,68 +11,156 @@ class GoodbyeScreen extends StatefulWidget {
 }
 
 class _GoodbyeScreenState extends State<GoodbyeScreen> {
-  /* List<SongCardInfo> cardInfo = [
+  List<SongCardInfo> cardInfo = [
     SongCardInfo(
-        title: "Hello", artist: "Adele", album: "25", albumArt: 'adele25.jpg'),
+      title: "Goodbyes",
+      artist: "Post Malone, Young Thug",
+      album: "Hollywood's Bleeding",
+      albumArt: "goodbyePM.jpg",
+      switchIcon: true,
+    ),
     SongCardInfo(
-        title: "Hello",
-        artist: "Pop Smoke, A Boogie Wit da Hoodie",
-        album: "Shoot For The Stars Aim For The Moon (Deluxe)",
-        albumArt: 'aboog.jpg'),
+      title: "Goodbye Earl",
+      artist: "The Chicks",
+      album: "Fly",
+      albumArt: 'goodbyeDixChix.jpg',
+      switchIcon: true,
+    ),
     SongCardInfo(
-        title: "Hello",
-        artist: "Allie X",
-        album: "Collxtion I",
-        albumArt: 'alliex.jpg'),
+      title: "Goodbye",
+      artist: "Russ",
+      album: "Pink Elephant",
+      albumArt: 'goodbyeRuss.jpg',
+      switchIcon: true,
+    ),
+    SongCardInfo(
+      title: "Goodbye Horses",
+      artist: "Q Lazzarus",
+      album: "Goodbye Horses - Single",
+      albumArt: 'goodbyeQL.jpg',
+      switchIcon: true,
+    ),
+    SongCardInfo(
+      title: "goodbye",
+      artist: "Billie Ellish",
+      album: "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+      albumArt: 'goodbyeBillie.jpg',
+      switchIcon: true,
+    ),
+    SongCardInfo(
+      title: "50 Ways to Say Goodbye",
+      artist: "Train",
+      album: "California 37",
+      albumArt: 'goodbyeTrain.png',
+      switchIcon: true,
+    ),
+    SongCardInfo(
+      title: "Goodbye",
+      artist: "Who Is Fancy",
+      album: "Goodbye",
+      albumArt: 'goodbyeFancy.jpg',
+      switchIcon: true,
+    ),
+    SongCardInfo(
+      title: "Goodbyes",
+      artist: "Sublime With Rome",
+      album: "Goodbyes'",
+      albumArt: 'goodbyeSWR.jpg',
+      switchIcon: true,
+    ),
+    SongCardInfo(
+      title: "Goodbye Blue Sky",
+      artist: "Pink Floyd",
+      album: "The Wall",
+      albumArt: 'goodbyePF.jpg',
+      switchIcon: true,
+    ),
+    SongCardInfo(
+      title: "Goodbye",
+      artist: "Kristinia DeBarge",
+      album: "Exposed (Deluxe Edition)",
+      albumArt: 'goodbyeKD.jpg',
+      switchIcon: true,
+    ),
   ];
-*/
+
   ///////////String searchInput;
   /////////////TextEditingController queryControl = TextEditingController();
-/*
+
   Widget songCardwidg(SongCardInfo) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: EdgeInsets.all(1.0),
       child: Card(
-        color: Colors.grey[800],
+        elevation: 10,
+        color: Colors.white,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(1.0),
           child: Row(
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(5.0),
                 child: Container(
-                    width: 50.0,
-                    height: 50.0,
-                    decoration: new BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: new DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage(SongCardInfo.albumArt)))),
+                  width: 50.0,
+                  height: 50.0,
+                  decoration: new BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    image: new DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage("lib/images/" + SongCardInfo.albumArt),
+                    ),
+                  ),
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                     SongCardInfo.title,
-                    style: TextStyle(color: Colors.black87, fontSize: 18),
+                    style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
                   ),
                   Text(
                     SongCardInfo.artist,
-                    style: TextStyle(color: Colors.black87, fontSize: 12),
+                    style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold),
                   ),
-                   Text(
+                  Text(
                     SongCardInfo.album,
-                    style: TextStyle(color: Colors.black87, fontSize: 18),
+                    style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold),
                   ),
                 ],
-              )
+              ),
+              Spacer(
+                flex: 3,
+              ),
+              IconButton(
+                iconSize: 30,
+
+                // WILL NEED TO MODIFY THIS LINE
+                icon: SongCardInfo.switchIcon
+                    ? Icon(Icons.favorite_border_outlined)
+                    : Icon(Icons.favorite_sharp),
+                onPressed: () {
+                  // ADD YOUR CODE HERE
+                  setState(() {
+                    SongCardInfo.switchIcon = !SongCardInfo.switchIcon;
+                  });
+                },
+              ),
             ],
           ),
         ),
       ),
     );
   }
-*/
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,7 +189,11 @@ class _GoodbyeScreenState extends State<GoodbyeScreen> {
         elevation: 15,
       ), //
 
-      body: Text('goodbye'),
+      body: ListView(
+        children: cardInfo.map((p) {
+          return songCardwidg(p);
+        }).toList(),
+      ),
     );
   }
 }

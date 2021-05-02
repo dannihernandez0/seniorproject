@@ -17,24 +17,29 @@ class _AboutUsState extends State<AboutUs> {
         title: RichText(
           textAlign: TextAlign.center,
           text: TextSpan(
-              text: "About The Creators",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.w900,
-              ),
-              children: <TextSpan>[
-                TextSpan(
-                  text: '\n',
-                  style: TextStyle(
-                    fontSize: 15,
-                  ),
-                ),
-              ]),
+            text: "About The Creators",
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
         ),
         centerTitle: true,
         toolbarHeight: 100,
         elevation: 15,
-      ), //
+      ),
+
+      //NEEDS SOME WORK BUT A BITCH IS TIRED.
+      body:  ListView(
+          children: [
+            SizedBox.expand(
+              child: Card(
+                child: Text("hello"),
+              ),
+            ),
+          ],
+        ),
+      
     );
   }
 }
