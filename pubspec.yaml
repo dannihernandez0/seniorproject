@@ -58,6 +58,17 @@ flutter:
     - lib/images/sunsetcut.jpg
     - lib/images/treescut.jpg
     - lib/images/watercut.png
+    #   --hello album
+    - lib/images/adele25.jpg
+    - lib/images/aboog.jpg
+    - lib/images/alliex.png
+    - lib/images/karolghello.jpg    
+    - lib/images/jcolehello.jpg
+    - lib/images/hellokitty.png
+    - lib/images/helloicecube.jpg
+    - lib/images/erykahhello.png
+    - lib/images/conwaytwittyhello.jpg
+    - lib/images/lionelrichie.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
