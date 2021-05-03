@@ -81,6 +81,11 @@ flutter:
     - lib/images/goodbyePM.png
     - lib/images/goodbyeDixChix.jpg
     - lib/images/meProfilepic.jpg
+    - lib/images/danprofile.jpg
+    - lib/images/silverprofile.jpg
+    - lib/images/twitter.png
+    - lib/images/instagram.jpg
+    - lib/images/facebook.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
