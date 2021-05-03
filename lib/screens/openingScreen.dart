@@ -28,7 +28,7 @@ class _OpeningScreenState extends State<OpeningScreen> {
 //change the background to a picture
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Color(0xff4C748B), body: HomeText());
+    return Scaffold(backgroundColor: Color(0xff5cdb95), body: HomeText());
   }
 }
 
@@ -46,7 +46,6 @@ class _HomeTextState extends State<HomeText> {
         children: [
           Text("Fluttify",
               style: TextStyle(
-                //fontFamily: 'Norwester',
                 fontWeight: FontWeight.w500,
                 fontSize: 48,
                 color: Color(0xffFFFFFF),
@@ -54,7 +53,6 @@ class _HomeTextState extends State<HomeText> {
               )),
           Text("Find your new sound",
               style: TextStyle(
-                //fontFamily: 'Kollektif',
                 fontSize: 18,
                 color: Color(0xffFFFFFF),
                 letterSpacing: 1.2,

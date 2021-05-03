@@ -13,11 +13,11 @@ class _ReportState extends State<Report> {
     return Scaffold(
         //
         appBar: AppBar(
-          backgroundColor: Color(0xff4C748B),
+          backgroundColor: Color(0xff5cdb95),
           title: RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-                text: "Experience Any Problems?",
+                text: "Fluttify",
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w900,
@@ -36,7 +36,8 @@ class _ReportState extends State<Report> {
           elevation: 15,
         ),
         body: Center(
-          child: Card(
+            child: Column(children: [
+          Card(
             elevation: 10,
             color: Colors.white,
             child: Padding(
@@ -61,18 +62,18 @@ class _ReportState extends State<Report> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.black87,
-                          fontSize: 24,
+                          fontSize: 22,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.all(10),
                     child: Text(
-                      "Send us an email at FluttifyTeam@Fluttify.com\n or contact us at \n(281)330-8004\n and be sure to tell us\n how you Fluttify!",
+                      "Send us an email at FluttifyTeam@Fluttify.com\n or contact us at (281)330-8004\n and be sure to tell us how you Fluttify!",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.black87,
-                        fontSize: 22,
+                        fontSize: 18,
                       ),
                     ),
                   ),
@@ -86,7 +87,11 @@ class _ReportState extends State<Report> {
               ),
             ),
           ),
-        ) //
+          Card(
+            child: Text(
+                "Disclaimer: The information provided by Fluttify (“we,” “us” or “our”) on Fluttify is for general informational purposes only. All information on the app Fluttify is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the app Fluttify. Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the Fluttify service or reliance on any information provided on the application. Your use of the app and your reliance on any information on the app is solely at your own risk. "),
+          )
+        ])) //
         );
   }
 }

@@ -13,7 +13,7 @@ class _AboutUsState extends State<AboutUs> {
     return Scaffold(
         //
         appBar: AppBar(
-          backgroundColor: Color(0xff4C748B),
+          backgroundColor: Color(0xff5cdb95),
           title: RichText(
             textAlign: TextAlign.center,
             text: TextSpan(

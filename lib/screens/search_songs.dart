@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:seniorproject/screens/helloSong.dart';
-//import 'package:sqflite/sqflite.dart';
 import 'package:seniorproject/screens/goodbyeSong.dart';
 
 class SearchSongs extends StatefulWidget {
@@ -20,7 +19,7 @@ class _SearchSongsState extends State<SearchSongs> {
     return Scaffold(
       //
       appBar: AppBar(
-        backgroundColor: Color(0xff4C748B),
+        backgroundColor: Color(0xff5cdb95),
         title: RichText(
           textAlign: TextAlign.center,
           text: TextSpan(
@@ -46,7 +45,7 @@ class _SearchSongsState extends State<SearchSongs> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(searchInput),
+          //Text(searchInput),
 
           //TEXT FIELD
           Container(

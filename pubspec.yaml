@@ -80,12 +80,26 @@ flutter:
     - lib/images/goodbyeSWR.jpg
     - lib/images/goodbyePM.png
     - lib/images/goodbyeDixChix.jpg
+    # --about me page pictures
     - lib/images/meProfilepic.jpg
     - lib/images/danprofile.jpg
     - lib/images/silverprofile.jpg
+    # --icons
     - lib/images/twitter.png
     - lib/images/instagram.jpg
     - lib/images/facebook.png
+    # --recommended albums
+    - lib/images/WTMC.jpg
+    - lib/images/maniac.png
+    - lib/images/demideluxe.jpg
+    - lib/images/bookoflove.jpg
+    - lib/images/dangerousmind.jpg
+    - lib/images/musicisaweapon.jpeg
+    - lib/images/deadroses.png
+    - lib/images/hoteldiablo.jpg
+    - lib/images/uncledrew.jpg
+    - lib/images/shebad.jpg
+    
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:seniorproject/screens/aboutUs.dart';
 import 'package:seniorproject/screens/liked_songs.dart';
@@ -19,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       /****************************APPBAR********************* */
       appBar: AppBar(
-        backgroundColor: Color(0xff4C748B),
+        backgroundColor: Color(0xff5cdb95),
         title: RichText(
           textAlign: TextAlign.center,
           text: TextSpan(
@@ -161,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
             //card4
             Card(
               elevation: 10,
-              //shadowColor: Colors.pink,
+              //shadowColor: Colors.greenAccent,
               child: new InkWell(
                 onTap: () {
                   Navigator.push(

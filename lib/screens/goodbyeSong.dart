@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seniorproject/models/song_Card.dart';
 
-//import 'package:sqflite/sqflite.dart';
 
 class GoodbyeScreen extends StatefulWidget {
   GoodbyeScreen({Key key}) : super(key: key);
@@ -16,7 +15,7 @@ class _GoodbyeScreenState extends State<GoodbyeScreen> {
       title: "Goodbyes",
       artist: "Post Malone, Young Thug",
       album: "Hollywood's Bleeding",
-      albumArt: "goodbyePM.jpg",
+      albumArt: "goodbyePM.png",
       switchIcon: true,
     ),
     SongCardInfo(
@@ -146,7 +145,7 @@ class _GoodbyeScreenState extends State<GoodbyeScreen> {
                 // WILL NEED TO MODIFY THIS LINE
                 icon: SongCardInfo.switchIcon
                     ? Icon(Icons.favorite_border_outlined)
-                    : Icon(Icons.favorite_sharp),
+                    : Icon(Icons.favorite_sharp, color: Colors.red),
                 onPressed: () {
                   // ADD YOUR CODE HERE
                   setState(() {
@@ -166,7 +165,7 @@ class _GoodbyeScreenState extends State<GoodbyeScreen> {
     return Scaffold(
       //
       appBar: AppBar(
-        backgroundColor: Color(0xff4C748B),
+        backgroundColor: Color(0xff5cdb95),
         title: RichText(
           textAlign: TextAlign.center,
           text: TextSpan(
